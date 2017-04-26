@@ -1,0 +1,15 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+html/sites/*/settings.php
+html/sites/*/files
+html/core
+html/libraries
+html/modules/contrib
+
+# Composer generated
+vendor
+docroot/composer.*
+
+# Docker and compose
+docker-runtime
+docker-compose.yml
