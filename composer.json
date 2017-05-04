@@ -223,6 +223,22 @@
           "composer/installers": "^1.2.0"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "drupal/cod",
+        "version": "dev-8.x-1.x",
+        "type": "drupal-profile",
+        "source": {
+          "url": "https://github.com/buldug/cod.git",
+          "type": "git",
+          "reference": "8.x-1.x"
+        },
+        "require": {
+          "composer/installers": "^1.2.0"
+        }
+      }
     }
   ],
   "require": {
@@ -233,9 +249,9 @@
     "composer/installers": "^1.2",
     "cweagans/composer-patches": "^1.6",
     "drupal-composer/drupal-scaffold": "^2.2",
+    "drupal/cod": "dev-8.x-1.x",
     "drupal/console": "~1.0",
     "drupal/core": "~8.0",
-    "drupal/webform": "5.x-dev",
     "drush/drush": "~8.0",
     "fronteed/jquery.icheck": "^1.0",
     "gjunge/jquery.rateit": "^1.1",
@@ -248,7 +264,8 @@
     "szimek/signature_pad": "^1.5",
     "ubilabs/geocomplete": "master",
     "webflo/drupal-finder": "^0.2.1",
-    "webmozart/path-util": "^2.3"
+    "webmozart/path-util": "^2.3",
+    "wikimedia/composer-merge-plugin": "^1.4"
   },
   "require-dev": {
     "behat/mink": "~1.7",
@@ -293,9 +310,14 @@
       "html/core": ["type:drupal-core"],
       "html/libraries/{$name}": ["type:drupal-library"],
       "html/modules/contrib/{$name}": ["type:drupal-module"],
-      "html/profiles/contrib/{$name}": ["type:drupal-profile"],
+      "html/profiles/{$name}": ["type:drupal-profile"],
       "html/themes/contrib/{$name}": ["type:drupal-theme"],
       "drush/contrib/{$name}": ["type:drupal-drush"]
+    },
+    "merge-plugin": {
+      "require": [
+        "html/profiles/cod/composer.json"
+      ]
     }
   }
 }
