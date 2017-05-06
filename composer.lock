@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "703c897af6ba542011f2ef4615f99057",
-    "content-hash": "82549c339cc646736887c1044b622775",
+    "hash": "893cfcd3f31e9a7dfa26b66c7099f43c",
+    "content-hash": "057d8b202ab1d09a41bc2be081f49825",
     "packages": [
         {
             "name": "RobinHerbots/jquery.inputmask",
@@ -1354,16 +1354,16 @@
         },
         {
             "name": "drupal-composer/drupal-scaffold",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-scaffold.git",
-                "reference": "3ad465ac853c2e52e6a808f5529859917662c256"
+                "reference": "1374e1031b98beb502abea3854f361304965c628"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-scaffold/zipball/3ad465ac853c2e52e6a808f5529859917662c256",
-                "reference": "3ad465ac853c2e52e6a808f5529859917662c256",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-scaffold/zipball/1374e1031b98beb502abea3854f361304965c628",
+                "reference": "1374e1031b98beb502abea3854f361304965c628",
                 "shasum": ""
             },
             "require": {
@@ -1391,7 +1391,7 @@
                 "GPL-2.0+"
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
-            "time": "2016-11-05 10:46:44"
+            "time": "2017-05-05 21:26:28"
         },
         {
             "name": "drupal/address",
@@ -3047,6 +3047,9 @@
                 "drupal": {
                     "version": "8.x-3.0-alpha2",
                     "datestamp": "1475246339"
+                },
+                "patches_applied": {
+                    "https://www.drupal.org/node/2849779 Implement missing PluginDefinitionInterface methods": "https://www.drupal.org/files/issues/rules-fix-tests.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3181,7 +3184,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/webform",
-                "reference": "c6a883d57b350142461724279f005fd672c61cd6"
+                "reference": "9105f49316336d8bc44a5965a923f3c205fc34c2"
             },
             "require": {
                 "drupal/core": "*"
@@ -3192,8 +3195,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0-beta12+24-dev",
-                    "datestamp": "1493921285"
+                    "version": "8.x-5.0-beta12+32-dev",
+                    "datestamp": "1494010385"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3245,7 +3248,7 @@
                 "source": "http://cgit.drupalcode.org/webform",
                 "issues": "https://drupal.org/project/issues/webform"
             },
-            "time": "2017-05-04 18:48:29"
+            "time": "2017-05-05 19:42:59"
         },
         {
             "name": "drush/drush",
