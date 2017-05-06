@@ -1,16 +1,6 @@
-# Created by .ignore support plugin (hsz.mobi)
-.idea
-html/sites/*/settings.php
-html/sites/*/files
-html/core
-html/libraries
-html/profiles/cod
-html/modules/contrib
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
 
-# Composer generated
-vendor
-docroot/composer.*
-
-# Docker and compose
-docker-runtime
-docker-compose.yml
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
