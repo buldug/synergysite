@@ -1,0 +1,10 @@
+/*
+ * @file
+ * Mixin for creating grid with inline-block property.
+ */
+
+@mixin inline-block($valign: top, $padding: 0) {
+  display: inline-block;
+  vertical-align: $valign;
+  padding: $padding;
+}

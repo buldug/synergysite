@@ -1,0 +1,15 @@
+%action-button {
+  @include border-radius(5px);
+  @include transition(all 500ms ease);
+  padding: $indent $indent-b;
+  border: 2px solid $dark-blue;
+  box-shadow: none;
+  min-height: 38px;
+  background-color: $white;
+  color: $dark-blue;
+
+  &:hover {
+    background-color: $dark-blue;
+    color: $white;
+  }
+}

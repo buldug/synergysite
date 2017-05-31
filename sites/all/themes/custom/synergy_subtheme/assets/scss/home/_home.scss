@@ -1,0 +1,96 @@
+.page-home {
+  .l-header {
+    display: none;
+  }
+
+  .l-main.l-constrained {
+    margin: 0;
+    width: 100%;
+
+    .l-content {
+      padding: 0;
+    }
+
+  }
+
+  .banner {
+    height: 800px;
+    overflow: hidden;
+
+    p {
+      @include font-size(0);
+      margin: 0;
+    }
+  }
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/banner.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background-color: rgba($black, 0.6);
+  }
+
+  .home-logo {
+    .logo-with-text {
+      position: absolute;
+      left: 0;
+      margin-bottom: 0;
+      height: 320px;
+      background-size: 200px;
+      background-repeat: no-repeat;
+      background-image: url('../images/home-logo.png');
+      background-position: 50%;
+    }
+    .event-text {
+      position: absolute;
+      right: 0;
+      margin-bottom: 0;
+      color: $white;
+    }
+
+    @include susy-media(medium) {
+      .logo-with-text {
+        top: 50%;
+        margin-top: -160px;
+        width: 50%;
+      }
+
+      .event-text {
+        @include font-size(2);
+        top: 50%;
+        margin-top: -160px;
+        width: 50%;
+        font-size: 20px;
+        padding-right: 15%;
+      }
+    }
+
+    @include susy-media(small) {
+      .logo-with-text {
+        top: 50px;
+        margin-top: 0;
+        width: 100%;
+      }
+
+      .event-text {
+        @include font-size(1.8);
+        top: 450px;
+        margin-top: 0;
+        padding-left: $indent-b;
+        padding-right: $indent-b;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+/**
+ * @file
+ * Main css for the site.
+ */
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.l-footer-wrapper {
+  @include font-size(1.2);
+  height: 70px;
+  background-color: transparent;
+  text-align: center;
+  color: $grey;
+
+  .l-region--footer {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    padding-top: $indent-s * 5;
+    border-top: 1px solid darken($very-light-grey, 10);
+    width: 100%;
+  }
+
+  .block,
+  p {
+    margin: 0;
+  }
+
+  a {
+    @include font-size(1.3);
+  }
+}
+
+.form-actions {
+  margin-bottom: 0;
+}
+.form-item {
+  margin-bottom: $indent-b;
+
+  label {
+    margin-bottom: $indent-s;
+    font-weight: normal;
+  }
+  .description {
+    @include font-size(1.2);
+    margin-top: $indent-s;
+    color: $grey;
+  }
+}

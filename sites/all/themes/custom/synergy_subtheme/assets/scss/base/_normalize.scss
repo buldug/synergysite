@@ -1,0 +1,133 @@
+/**
+ * @file
+ * Normalize.
+ */
+
+*,
+*:before,
+*:after,
+body.adminimal-theme *,
+.vertical-tabs .form-type-textfield input {
+  @include box-sizing(border-box);
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-family: $arial;
+  font-size: $base-font-size;
+  line-height: 1.4;
+}
+
+body {
+  @include font-size;
+  margin: 0;
+  background: #F9F9F9;
+  line-height: 1.4;
+  font-family: $open-sans, $arial;
+  color: $font-color;
+
+  a {
+    @include transition(color 500ms ease);
+    @include font-size;
+    text-decoration: none;
+    color: $dark-blue;
+
+    &:hover {
+      text-decoration: underline;
+      color: lighten($dark-blue, 25);
+    }
+  }
+}
+
+ul,
+.block ul,
+.item-list ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &.expanded {
+      list-style: none;
+    }
+  }
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+
+body img,
+body video {
+  /* Remove border when inside `a` element in IE 8/9. */
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+option {
+  @include font-size();
+  font-family: $arial;
+
+  &:active,
+  &:focus {
+    background: $dark-cyan;
+  }
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+.node-unpublished {
+  fieldset legend {
+    background: #FDE6E6;
+  }
+}
+
+fieldset {
+  box-shadow: 0px -3px 0 $dark-cyan;
+  min-width: 0;
+
+  fieldset {
+    box-shadow: 0px -2px 0 $dark-cyan;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+input[type=text],
+input[type=password] {
+  @include border-radius(5px);
+}
+
+input[type=text],
+input[type=password] {
+  padding: $indent;
+  border: 1px solid $very-light-grey;
+  width: 100%;
+  box-shadow: none;
+  min-height: 38px;
+}
+
+input[type=submit] {
+  @extend %action-button;
+}
