@@ -1,0 +1,69 @@
+/*
+ * @file
+ * Variables.
+ */
+
+// Typography.
+$arial: Arial, sans-serif;
+$open-sans: "OpenSansRegular";
+$base-font-size: 10px;
+
+// Primary colours.
+$white: #fff;
+$black: #000;
+$dark-red: #990000;
+$dark-cyan: #007c92;
+$strong-cyan: #00b0ca;
+$dark-blue: #1179BD;
+$orange: #eb9700;
+$light-green: #a8b400;
+
+// Infrastructure colours
+$font-color: #333;
+$grey: #7c7c7c;
+$description: #c0c7d1;
+$very-light-grey: #f4f4f4;
+
+// Spaces.
+$indent-b: 20px;
+$indent-m: 15px;
+$indent: 10px;
+$indent-s: 5px;
+
+// Susy Defaults.
+$susy: (
+  columns: 12,
+  container: 1140px,
+  gutters: 0,
+  gutter-position: inside,
+  global-box-sizing: border-box,
+);
+
+$susy-media: (
+  big: (
+    media: screen,
+    max-width: 1200px,
+  ),
+  medium: (
+    media: screen,
+    min-width: 1024px,
+  ),
+  medium-m: (
+    media: screen,
+    min-width: 768px,
+  ),
+  small: (
+    media: screen,
+    max-width: 767px
+  ),
+  small-m: (
+    media: screen,
+    max-width: 480px
+  ),
+);
+
+// FONT AWESOME
+$fa-sass-asset-helper: true;
+
+// BOX SHADOW
+$box-shadow: 0 1px 3px $black;

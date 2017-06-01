@@ -1,0 +1,98 @@
+.page-user.not-logged-in {
+  .l-branding.site-branding {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .l-main.l-constrained {
+    margin: 0 auto;
+    width: 40%;
+
+    @include susy-media(medium) {
+      width: 40%;
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+      width: 60%;
+    }
+
+    @include susy-media(small) {
+      padding-left: $indent-m;
+      padding-right: $indent-m;
+      width: 100%;
+    }
+  }
+  .has-no-sidebars .l-content {
+    @include border-radius(10px);
+    float: none;
+    margin-bottom: $indent-b * 2;
+    padding: $indent-b*2 $indent-m * 2;
+  }
+
+  .site-branding__name,
+  .l-content h1,
+  .tabs--primary {
+    display: none;
+  }
+
+
+  label {
+    @include font-size(1.5);
+  }
+  input[type=text],
+  input[type=password] {
+    min-height: 48px;
+  }
+
+  .form-actions {
+    text-align: right;
+  }
+  input[type=submit] {
+    @include font-size(2);
+    min-height: 48px;
+    text-transform: uppercase;
+  }
+
+  .cancel-button-wrapper {
+    margin-top: $indent-b;
+  }
+
+  .request-pass a,
+  .cancel-button {
+    @include font-size(1.2);
+    color: $description;
+
+    &:hover {
+      color: darken($description, 15);
+    }
+  }
+}
+
+.user-login {
+  .request-pass {
+    margin-top: $indent-b;
+    text-align: right;
+  }
+
+  .create-account {
+    margin-top: $indent-b;
+    padding-top: $indent-b;
+    border-top: 1px solid $very-light-grey;
+    text-align: center;
+
+    a {
+      @include inline-block($valign: middle);
+    }
+
+    &:before {
+      @include inline-block($valign: middle);
+      content: '';
+      margin-right: $indent-s;
+      width: 20px;
+      height: 23px;
+      background-image: url('../../logo.svg');
+      background-size: 20px;
+      background-repeat: no-repeat;
+    }
+  }
+}

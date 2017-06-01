@@ -1,0 +1,30 @@
+/**
+ * @file
+ * All imports are placed here.
+ * Do not write any other code or styles.
+ * Create a sperate file and include it here.
+ */
+
+// CSS Libraries.
+@import "compass";
+@import "susy";
+@import "font-awesome-compass";
+@import "font-awesome";
+
+// Variables.
+@import "variables/variables";
+
+// Mixins.
+@import "mixins/mixins";
+
+// Extends.
+@import "extends/extends";
+
+// Base.
+@import "base/base";
+
+// User pages
+@import "user/user";
+
+// Home page
+@import "home/home";

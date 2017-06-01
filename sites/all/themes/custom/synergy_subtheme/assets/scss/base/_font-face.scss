@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Add external fonts in site.
+ */
+
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: url('../fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
