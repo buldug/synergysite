@@ -1,0 +1,35 @@
+.page-node-add-session {
+  .field-multiple-drag,
+  .description {
+    display: none;
+  }
+
+  .group-schedule {
+    .form-item {
+      margin-bottom: 0;
+    }
+  }
+
+  .field-name-field-accepted {
+    label {
+      margin-bottom: $indent-m;
+    }
+
+    .form-item {
+      margin-bottom: $indent;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .group-schedule,
+  .field-name-og-vocabulary  {
+    margin-bottom: $indent-b;
+  }
+
+  .field-name-og-vocabulary .form-item {
+    margin-bottom: 0;
+  }
+}

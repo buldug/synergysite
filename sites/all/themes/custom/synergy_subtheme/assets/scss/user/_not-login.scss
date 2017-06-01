@@ -1,9 +1,9 @@
+/*
+ * @file
+ * Designs for SignIn, SignUp and Request password.
+ */
+
 .page-user.not-logged-in {
-  .l-branding.site-branding {
-    float: none;
-    width: 100%;
-    text-align: center;
-  }
   .l-main.l-constrained {
     margin: 0 auto;
     width: 40%;
@@ -29,12 +29,17 @@
     padding: $indent-b*2 $indent-m * 2;
   }
 
-  .site-branding__name,
+  .l-navigation,
   .l-content h1,
   .tabs--primary {
     display: none;
   }
 
+  .l-branding.site-branding {
+    margin-top: $indent-b;
+    margin-bottom: $indent-b*2;
+    text-align: center;
+  }
 
   label {
     @include font-size(1.5);
