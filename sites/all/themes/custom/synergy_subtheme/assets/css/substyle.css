@@ -2900,9 +2900,6 @@ input[type=submit]:hover {
   background-color: #0077c0;
   color: #fff;
 }
-.form-actions input[type=submit] {
-  margin-right: 15px;
-}
 
 /**
  * @file
@@ -3158,22 +3155,20 @@ table tbody td {
   display: none;
 }
 
+.not-front.not-logged-in .l-header,
 .not-front.logged-in .l-header {
   position: relative;
   padding-top: 10px;
 }
+.not-front.not-logged-in .l-header > .l-constrained,
 .not-front.logged-in .l-header > .l-constrained {
   display: inline-block;
   vertical-align: bottom;
   padding: 0;
-  max-width: 1px;
   min-height: 120px;
 }
-.not-front.logged-in .l-header .l-branding.site-branding {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
+.not-front.not-logged-in .l-header,
+.not-front.not-logged-in .l-main-wrapper,
 .not-front.logged-in .l-header,
 .not-front.logged-in .l-main-wrapper {
   margin: 0 auto;
@@ -3181,19 +3176,45 @@ table tbody td {
   padding-right: 15px;
   max-width: 1150px;
 }
+.not-front.not-logged-in .l-navigation,
 .not-front.logged-in .l-navigation {
   display: inline-block;
   vertical-align: bottom;
   padding: 0;
   margin-bottom: 0;
-  margin-left: 120px;
-  width: calc(100% - 125px);
 }
+.not-front.not-logged-in .l-navigation .l-constrained,
 .not-front.logged-in .l-navigation .l-constrained {
   width: 100%;
 }
+.not-front.not-logged-in .l-main-wrapper,
 .not-front.logged-in .l-main-wrapper {
   margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .not-front.not-logged-in .l-header > .l-constrained,
+  .not-front.logged-in .l-header > .l-constrained {
+    max-width: 1px;
+  }
+  .not-front.not-logged-in .l-header .l-branding.site-branding,
+  .not-front.logged-in .l-header .l-branding.site-branding {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .not-front.not-logged-in .l-header .l-navigation,
+  .not-front.logged-in .l-header .l-navigation {
+    margin-left: 120px;
+    width: calc(100% - 125px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .not-front.not-logged-in .l-header .l-navigation,
+  .not-front.logged-in .l-header .l-navigation {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+  }
 }
 
 .l-branding.site-branding {
@@ -3255,6 +3276,16 @@ html.js fieldset.collapsible .fieldset-legend .collapsed .fieldset-title:before 
   content: "";
 }
 
+.vertical-tabs + .form-actions input[id*='edit-submit'] {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .l-main .l-content {
+    padding: 15px;
+  }
+}
+
 /*
  * @file
  * User pages.
@@ -3290,7 +3321,16 @@ html.js fieldset.collapsible .fieldset-legend .collapsed .fieldset-title:before 
   border-radius: 10px;
   float: none;
   margin-bottom: 40px;
-  padding: 40px 30px;
+}
+@media screen and (min-width: 768px) {
+  .page-user.not-logged-in .has-no-sidebars .l-content {
+    padding: 40px 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-user.not-logged-in .has-no-sidebars .l-content {
+    padding: 30px 15px;
+  }
 }
 .page-user.not-logged-in .l-navigation,
 .page-user.not-logged-in .l-content h1,
@@ -3314,10 +3354,20 @@ html.js fieldset.collapsible .fieldset-legend .collapsed .fieldset-title:before 
   text-align: right;
 }
 .page-user.not-logged-in input[type=submit] {
-  font-size: 20px;
-  font-size: 2rem;
   min-height: 48px;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .page-user.not-logged-in input[type=submit] {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-user.not-logged-in input[type=submit] {
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
 }
 .page-user.not-logged-in .cancel-button-wrapper {
   margin-top: 20px;
@@ -3470,8 +3520,6 @@ html.js fieldset.collapsible .fieldset-legend .collapsed .fieldset-title:before 
   position: absolute;
   left: 0;
   margin-bottom: 0;
-  height: 320px;
-  background-size: 200px;
   background-repeat: no-repeat;
   background-image: url("../images/home-logo.png?dasda");
   background-position: 50%;
@@ -3482,11 +3530,13 @@ html.js fieldset.collapsible .fieldset-legend .collapsed .fieldset-title:before 
   margin-bottom: 0;
   color: #fff;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .page-home .home-logo .logo-with-text {
     top: 50%;
     margin-top: -200px;
     width: 50%;
+    height: 320px;
+    background-size: 200px;
   }
   .page-home .home-logo .event-text {
     font-size: 20px;
@@ -3501,13 +3551,15 @@ html.js fieldset.collapsible .fieldset-legend .collapsed .fieldset-title:before 
 @media screen and (max-width: 767px) {
   .page-home .home-logo .logo-with-text {
     top: 50px;
-    margin-top: 0;
+    margin-top: 20px;
     width: 100%;
+    height: 250px;
+    background-size: 150px;
   }
   .page-home .home-logo .event-text {
     font-size: 18px;
     font-size: 1.8rem;
-    top: 450px;
+    top: 350px;
     margin-top: 0;
     padding-left: 20px;
     padding-right: 20px;

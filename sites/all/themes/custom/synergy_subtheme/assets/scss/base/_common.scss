@@ -57,6 +57,7 @@
   display: none;
 }
 
+.not-front.not-logged-in,
 .not-front.logged-in {
   .l-header {
     position: relative;
@@ -64,16 +65,10 @@
 
     & > .l-constrained {
       @include inline-block($valign: bottom);
-      max-width: 1px;
       min-height: 120px;
     }
-
-    .l-branding.site-branding {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
   }
+
   .l-header,
   .l-main-wrapper {
     margin: 0 auto;
@@ -85,8 +80,6 @@
   .l-navigation {
     @include inline-block($valign: bottom);
     margin-bottom: 0;
-    margin-left: 120px;
-    width: calc(100% - 125px);
 
     .l-constrained {
       width: 100%;
@@ -95,6 +88,35 @@
 
   .l-main-wrapper {
     margin-top: $indent-b;
+  }
+
+  @include susy-media(medium-m) {
+    .l-header {
+      & > .l-constrained {
+        max-width: 1px;
+      }
+
+      .l-branding.site-branding {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      .l-navigation {
+        margin-left: 120px;
+        width: calc(100% - 125px);
+      }
+    }
+  }
+
+  @include susy-media(small) {
+    .l-header {
+      .l-navigation {
+        margin-left: -$indent-m;
+        margin-right: -$indent-m;
+        width: calc(100% + 30px);
+      }
+    }
   }
 }
 
@@ -158,5 +180,17 @@ html.js fieldset.collapsible .fieldset-legend {
         content: $fa-var-chevron-up;
       }
     }
+  }
+}
+
+.vertical-tabs + .form-actions {
+  input[id*='edit-submit'] {
+    margin-right: $indent-b;
+  }
+}
+
+.l-main .l-content {
+  @include susy-media(small) {
+    padding: $indent-m;
   }
 }

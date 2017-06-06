@@ -26,7 +26,13 @@
     @include border-radius(10px);
     float: none;
     margin-bottom: $indent-b * 2;
-    padding: $indent-b*2 $indent-m * 2;
+
+    @include susy-media(medium-m) {
+      padding: $indent-b*2 $indent-m * 2;
+    }
+    @include susy-media(small) {
+      padding: $indent-m*2 $indent-m;
+    }
   }
 
   .l-navigation,
@@ -53,9 +59,15 @@
     text-align: right;
   }
   input[type=submit] {
-    @include font-size(2);
     min-height: 48px;
     text-transform: uppercase;
+
+    @include susy-media(medium-m) {
+      @include font-size(2);
+    }
+    @include susy-media(small) {
+      @include font-size(1.5);
+    }
   }
 
   .cancel-button-wrapper {
