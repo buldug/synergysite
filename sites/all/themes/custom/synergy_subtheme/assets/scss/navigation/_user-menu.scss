@@ -1,0 +1,75 @@
+/*
+ * @file
+ * Design for Main menu.
+ */
+
+
+.pane-system-user-menu {
+  position: absolute;
+  top: 10px;
+  right: 15%;
+  z-index: 2;
+
+  ul, li,
+  .menu .leaf {
+    list-style: none;
+  }
+
+  .menu {
+    li {
+      @include inline-block($valign: bottom);
+      margin-right: $indent;
+
+      &:after {
+        @include font-size(1.5);
+        @include inline-block($valign: bottom);
+        margin-left: $indent;
+        content: '/';
+        color: $white;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    a {
+      @include font-size(1.5);
+      color: $white;
+
+      &:hover {
+        border-bottom: 1px solid $white;
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+}
+
+.l-navigation {
+  background-color: $dark-blue;
+
+  .block__title {
+    display: none;
+  }
+
+  .menu {
+    li {
+      @include inline-block;
+
+      a {
+        display: block;
+        padding: $indent-m;
+        color: $white;
+
+        &:hover {
+          background-color: $very-light-grey;
+          text-decoration: none;
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+}

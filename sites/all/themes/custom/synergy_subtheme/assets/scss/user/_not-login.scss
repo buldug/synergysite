@@ -1,9 +1,9 @@
+/*
+ * @file
+ * Designs for SignIn, SignUp and Request password.
+ */
+
 .page-user.not-logged-in {
-  .l-branding.site-branding {
-    float: none;
-    width: 100%;
-    text-align: center;
-  }
   .l-main.l-constrained {
     margin: 0 auto;
     width: 40%;
@@ -26,15 +26,26 @@
     @include border-radius(10px);
     float: none;
     margin-bottom: $indent-b * 2;
-    padding: $indent-b*2 $indent-m * 2;
+
+    @include susy-media(medium-m) {
+      padding: $indent-b*2 $indent-m * 2;
+    }
+    @include susy-media(small) {
+      padding: $indent-m*2 $indent-m;
+    }
   }
 
-  .site-branding__name,
+  .l-navigation,
   .l-content h1,
   .tabs--primary {
     display: none;
   }
 
+  .l-branding.site-branding {
+    margin-top: $indent-b;
+    margin-bottom: $indent-b*2;
+    text-align: center;
+  }
 
   label {
     @include font-size(1.5);
@@ -48,9 +59,15 @@
     text-align: right;
   }
   input[type=submit] {
-    @include font-size(2);
     min-height: 48px;
     text-transform: uppercase;
+
+    @include susy-media(medium-m) {
+      @include font-size(2);
+    }
+    @include susy-media(small) {
+      @include font-size(1.5);
+    }
   }
 
   .cancel-button-wrapper {

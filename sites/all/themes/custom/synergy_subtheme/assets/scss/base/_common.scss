@@ -37,7 +37,10 @@
   margin-bottom: 0;
 }
 .form-item {
-  margin-bottom: $indent-b;
+  &,
+  .text-format-wrapper & {
+    margin-bottom: $indent-b;
+  }
 
   label {
     margin-bottom: $indent-s;
@@ -47,5 +50,147 @@
     @include font-size(1.2);
     margin-top: $indent-s;
     color: $grey;
+  }
+}
+
+.site-branding__name {
+  display: none;
+}
+
+.not-front.not-logged-in,
+.not-front.logged-in {
+  .l-header {
+    position: relative;
+    padding-top: $indent;
+
+    & > .l-constrained {
+      @include inline-block($valign: bottom);
+      min-height: 120px;
+    }
+  }
+
+  .l-header,
+  .l-main-wrapper {
+    margin: 0 auto;
+    padding-left: $indent-m;
+    padding-right: $indent-m;
+    max-width: 1150px;
+  }
+
+  .l-navigation {
+    @include inline-block($valign: bottom);
+    margin-bottom: 0;
+
+    .l-constrained {
+      width: 100%;
+    }
+  }
+
+  .l-main-wrapper {
+    margin-top: $indent-b;
+  }
+
+  @include susy-media(medium-m) {
+    .l-header {
+      & > .l-constrained {
+        max-width: 1px;
+      }
+
+      .l-branding.site-branding {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      .l-navigation {
+        margin-left: 120px;
+        width: calc(100% - 125px);
+      }
+    }
+  }
+
+  @include susy-media(small) {
+    .l-header {
+      .l-navigation {
+        margin-left: -$indent-m;
+        margin-right: -$indent-m;
+        width: calc(100% + 30px);
+      }
+    }
+  }
+}
+
+
+.l-branding.site-branding {
+  float: none;
+  width: 100%;
+
+  .site-branding__logo {
+    display: block;
+  }
+}
+.l-main.l-constrained {
+  margin: 0;
+  width: 100%;
+}
+
+html.js .form-autocomplete {
+  background-position: 100% 10px;
+  background-size: 20px;
+}
+.cke_contents.cke_reset {
+  padding: 8px $indent;
+}
+.ckeditor_links {
+  display: inline-block;
+  margin-bottom: $indent-b;
+}
+
+.filter-wrapper {
+  .form-item,
+  .filter-guidelines {
+    padding: 0;
+  }
+}
+
+.filter-wrapper,
+.field-type-file {
+  margin-bottom: $indent-b;
+}
+
+.tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+
+html.js fieldset.collapsible .fieldset-legend {
+  padding-left: 0;
+  background: none;
+
+  .fieldset-title {
+    &:before {
+      @include fa-icon();
+      content: $fa-var-chevron-down;
+      margin-right: $indent;
+    }
+  }
+
+  .collapsed {
+    .fieldset-title {
+      &:before {
+        content: $fa-var-chevron-up;
+      }
+    }
+  }
+}
+
+.vertical-tabs + .form-actions {
+  input[id*='edit-submit'] {
+    margin-right: $indent-b;
+  }
+}
+
+.l-main .l-content {
+  @include susy-media(small) {
+    padding: $indent-m;
   }
 }

@@ -1,8 +1,8 @@
 <?php
-
-function synergy_subtheme_form_alter(&$form, &$form_state, $form_id) {
-  //var_dump($form_id);
-}
+/**
+ * @file
+ * All Alter functions for templates and theme functions.
+ */
 
 /**
  * Implements hook_form_user_login_alter().
@@ -33,4 +33,3 @@ function synergy_subtheme_form_user_register_form_alter(&$form, &$form_state, $f
     '#markup' => '<div class="cancel-button-wrapper">' . l(t('Cancel'), '/', array('attributes' => array('title' => t('Cancel'), 'class' => array('cancel-button')))) . '</div>',
   );
 }
-

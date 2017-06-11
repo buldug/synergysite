@@ -8,10 +8,10 @@ core = 7.x
 ; ========================================
 ; Stylesheets
 ; ========================================
-; stylesheets[all][] = css/pisces.normalize.css
-; stylesheets[all][] = css/pisces.hacks.css
-; stylesheets[all][] = css/pisces.styles.css
-; stylesheets[all][] = css/pisces.no-query.css
+stylesheets[all][] = css/pisces.normalize.css
+stylesheets[all][] = css/pisces.hacks.css
+stylesheets[all][] = css/pisces.styles.css
+stylesheets[all][] = css/pisces.no-query.css
 stylesheets[all][] = assets/css/substyle.css
 
 ; ========================================

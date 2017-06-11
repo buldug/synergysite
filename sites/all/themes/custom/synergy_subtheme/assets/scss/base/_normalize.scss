@@ -18,14 +18,21 @@ html {
   font-size: $base-font-size;
   line-height: 1.4;
 }
-
 body {
+  @include font-size(1.6);
+  background-color: $white;
+}
+body.html {
   @include font-size;
   margin: 0;
-  background: #F9F9F9;
+  background: $very-light-grey;
   line-height: 1.4;
   font-family: $open-sans, $arial;
   color: $font-color;
+
+  .l-page {
+    background-color: $very-light-grey;
+  }
 
   a {
     @include transition(color 500ms ease);
@@ -97,11 +104,24 @@ button {
 }
 
 fieldset {
-  box-shadow: 0px -3px 0 $dark-cyan;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid $description;
+  box-shadow: 0px -3px 0 $dark-blue;
   min-width: 0;
 
   fieldset {
-    box-shadow: 0px -2px 0 $dark-cyan;
+    box-shadow: 0px -2px 0 $dark-blue;
+  }
+
+  legend {
+    padding-left: $indent-m;
+    padding-right: $indent-m;
+    background-color: $white;
+  }
+
+  .vertical-tabs &.vertical-tabs-pane {
+    padding: 10px;
   }
 }
 
@@ -121,8 +141,8 @@ input[type=password] {
 
 input[type=text],
 input[type=password] {
-  padding: $indent;
-  border: 1px solid $very-light-grey;
+  padding: $indent - 2;
+  border: 1px solid $description;
   width: 100%;
   box-shadow: none;
   min-height: 38px;
@@ -130,4 +150,46 @@ input[type=password] {
 
 input[type=submit] {
   @extend %action-button;
+}
+
+input[id*='edit-preview']{
+  border-color: $orange;
+  color: $orange;
+
+  &:hover {
+    background-color: $orange;
+  }
+}
+
+table {
+  margin-bottom: $indent-b;
+  width: 100%;
+
+  th {
+    padding: $indent;
+    background-color: $white;
+  }
+
+  .form-item & label {
+    margin-bottom: 0;
+  }
+
+  tbody {
+    tr {
+      border-top: 1px solid $dark-blue;
+      &.odd {
+        background-color: $white;
+      }
+      &.even {
+        background-color: rgba($dark-blue, 0.1);
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $dark-blue;
+      }
+    }
+    td {
+      padding: $indent;
+    }
+  }
 }

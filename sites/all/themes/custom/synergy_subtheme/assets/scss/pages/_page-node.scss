@@ -1,0 +1,14 @@
+.l-content {
+  background-color: $white;
+
+  h1 {
+    margin-bottom: $indent-b * 2;
+    color: $dark-blue;
+  }
+}
+
+.not-front {
+  .panel-pane {
+    margin-bottom: $indent-s * 5;
+  }
+}
