@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Synergy mailsystem feature.
+ */
+
+include_once 'synergy_mailsystem.features.inc';
