@@ -3566,6 +3566,9 @@ html.js fieldset.collapsible .fieldset-legend .collapsed .fieldset-title:before 
     width: 100%;
     text-align: center;
   }
+  .page-home .panel-pane {
+    position: relative;
+  }
 }
 
 /**
