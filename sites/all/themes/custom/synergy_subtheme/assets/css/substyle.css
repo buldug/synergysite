@@ -3493,6 +3493,7 @@ html.js fieldset.collapsible .fieldset-legend .collapsed .fieldset-title:before 
 .page-home .banner {
   height: 800px;
   overflow: hidden;
+  position: relative;
 }
 .page-home .banner p {
   font-size: 0px;
@@ -3565,9 +3566,6 @@ html.js fieldset.collapsible .fieldset-legend .collapsed .fieldset-title:before 
     padding-right: 20px;
     width: 100%;
     text-align: center;
-  }
-  .page-home .panel-pane {
-    position: relative;
   }
 }
 

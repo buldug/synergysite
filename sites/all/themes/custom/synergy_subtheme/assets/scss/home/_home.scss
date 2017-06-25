@@ -16,6 +16,7 @@
   .banner {
     height: 800px;
     overflow: hidden;
+    position: relative;
 
     p {
       @include font-size(0);
@@ -94,9 +95,5 @@
         text-align: center;
       }
     }
-  }
-
-  .panel-pane {
-    position: relative;
   }
 }
