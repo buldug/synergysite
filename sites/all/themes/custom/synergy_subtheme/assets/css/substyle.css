@@ -3481,7 +3481,7 @@ html.js fieldset.collapsible .fieldset-legend .collapsed .fieldset-title:before 
   color: #0077c0;
 }
 
-.page-home .l-header {
+.page-home .l-header .l-branding {
   display: none;
 }
 .page-home .l-branding.site-branding {
