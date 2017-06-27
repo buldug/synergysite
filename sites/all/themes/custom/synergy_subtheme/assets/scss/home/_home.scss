@@ -1,5 +1,5 @@
 .page-home {
-  .l-header {
+  .l-header .l-branding {
     display: none;
   }
 
@@ -16,6 +16,7 @@
   .banner {
     height: 800px;
     overflow: hidden;
+    position: relative;
 
     p {
       @include font-size(0);
