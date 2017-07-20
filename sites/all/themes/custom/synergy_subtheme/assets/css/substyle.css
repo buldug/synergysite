@@ -3201,6 +3201,7 @@ table tbody td {
     position: absolute;
     top: 10px;
     left: 10px;
+    width:100px;
   }
   .not-front.not-logged-in .l-header .l-navigation,
   .not-front.logged-in .l-header .l-navigation {
