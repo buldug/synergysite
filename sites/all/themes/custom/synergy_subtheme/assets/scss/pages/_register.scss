@@ -1,0 +1,47 @@
+/**
+ * @file
+ * Register page.
+ */
+
+/*================================ Tickets. ================================*/
+.pane-node-field-event-tickets {
+
+  // Quantity form item.
+  .form-item-ticket-quantity-1 {
+    label {
+      float: left;
+      line-height: 2.7;
+      margin-right: 7px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    input {
+      width: 55px;
+      text-align: center;
+      font-weight: bold;
+      outline: none;
+      color: $dark-blue;
+    }
+  }
+
+  // Ticket description form item.
+  .field--name-ticket-type-description {
+    display: none;
+  }
+
+  // Submit / Register form item .
+  // Add style in addition to the default button styling.
+  .form-submit {
+    margin: $indent-s 0;
+    padding: $indent-m $indent-b;
+    border: 2px solid $dark-blue;
+    outline: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $white;
+    background: $gradient-dark-blue;
+    cursor: pointer;
+  }
+
+}
