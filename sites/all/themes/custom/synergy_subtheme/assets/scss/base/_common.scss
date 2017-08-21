@@ -90,6 +90,13 @@
     margin-top: $indent-b;
   }
 
+  .l-content {
+    border-top: 5px solid $dark-blue;
+    box-shadow: 0 -3px 0 0 #fff;
+    border-top-left-radius: $indent;
+    border-top-right-radius: $indent;
+  }
+
   @include susy-media(medium-m) {
     .l-header {
       & > .l-constrained {
@@ -98,7 +105,7 @@
 
       .l-branding.site-branding {
         position: absolute;
-        top: 10px;
+        top: 5px;
         left: 10px;
       }
 
@@ -190,6 +197,7 @@ html.js fieldset.collapsible .fieldset-legend {
 }
 
 .l-main .l-content {
+
   @include susy-media(small) {
     padding: $indent-m;
   }
