@@ -9,6 +9,7 @@
 
   .views-row {
     float: left;
+    margin-top: $indent;
     padding: $indent;
     width: 100%;
     background-color: #f5f5f5;
@@ -34,8 +35,10 @@
     background-color: #efefef;
     background-image: url(http://drupalsynergy.dev/sites/all/themes/custom/synergy_subtheme/logo.png);
 
-    &:nth-of-type(2n) {
-      margin-left: $indent;
+    @include susy-media(medium-m) {
+      &:nth-of-type(2n) {
+        margin-left: $indent;
+      }
     }
   }
 
