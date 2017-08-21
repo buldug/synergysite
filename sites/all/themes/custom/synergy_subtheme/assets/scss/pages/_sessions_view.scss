@@ -4,6 +4,7 @@
  * Ex.: .org/2017/sessions
 */
 
+/*============================ SESSIONS. ============================*/
 .view-cod-session-tracks {
   @extend %clearfix;
 
@@ -65,9 +66,21 @@
       text-decoration: none;
     }
   }
+
+  .view-cod-session-tracks {
+    > .view-content .views-row {
+      margin-top: $indent-m;
+
+      @include susy-media(medium-m) {
+        &:nth-of-type(2n) {
+          margin-left: $indent;
+        }
+      }
+    }
+  }
 }
 
-/*=========================== Sessions Summary. ===========================*/
+/*=========================== Sessions Summary (list). ===========================*/
 
 .pane-cod-session-tracks-track-session-summary {
   .views-row a {
