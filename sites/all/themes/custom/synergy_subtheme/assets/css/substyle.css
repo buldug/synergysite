@@ -3226,10 +3226,15 @@ table tbody td {
 
 .l-branding.site-branding {
   float: none;
-  width: 100%;
+  width: initial;
+  margin: 0;
 }
 .l-branding.site-branding .site-branding__logo {
   display: block;
+}
+
+body.page-user .l-branding.site-branding {
+  width: 100%;
 }
 
 .l-main.l-constrained {
