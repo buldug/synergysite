@@ -3,7 +3,7 @@
  * @file
  * All imports are placed here.
  * Do not write any other code or styles.
- * Create a sperate file and include it here.
+ * Create a separate file and include it here.
  */
 /*!
  *  Font Awesome 4.6.2 by @davegandy - http://fontawesome.io - @fontawesome
@@ -3226,10 +3226,15 @@ table tbody td {
 
 .l-branding.site-branding {
   float: none;
-  width: 100%;
+  width: initial;
+  margin: 0;
 }
 .l-branding.site-branding .site-branding__logo {
   display: block;
+}
+
+body.page-user .l-branding.site-branding {
+  width: 100%;
 }
 
 .l-main.l-constrained {
