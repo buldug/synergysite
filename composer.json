@@ -251,7 +251,7 @@
     "drupal-composer/drupal-scaffold": "^2.2",
     "drupal/cod": "dev-8.x-1.x",
     "drupal/console": "~1.0",
-    "drupal/core": "~8.0",
+    "drupal/core": "^8.3",
     "drush/drush": "~8.0",
     "fronteed/jquery.icheck": "^1.0",
     "gjunge/jquery.rateit": "^1.1",
